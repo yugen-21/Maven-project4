@@ -3,7 +3,7 @@ package main.java.com.example.automation;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class LoginServiceTest {
+public class LoginService {
 
     @Test
     public void testValidateLogin() {
