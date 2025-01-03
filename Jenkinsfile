@@ -27,7 +27,7 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                     bat """
                         mvn sonar:sonar \
-                        -Dsonar.projectKey=smth \
+                        -Dsonar.projectKey=somethinng \
                         -Dsonar.sources=src/main/java \
                         -Dsonar.tests=src/test/java \
                         -Dsonar.junit.reportPaths=target/surefire-reports \
