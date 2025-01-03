@@ -1,10 +1,9 @@
-package com.example.automation;
+package main.java.com.example.automation;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-public class LoginService {
+public class LoginServiceTest {
 
     @Test
     public void testValidateLogin() {
@@ -20,4 +19,3 @@ public class LoginService {
         assertEquals("Dashboard", title, "Dashboard title should match");
     }
 }
-
