@@ -1,31 +1,23 @@
 package com.example.automation;
 
-/**
- * A simple service class that simulates login functionality.
- */
-public class LoginService {
+import org.junit.jupiter.api.Test;
 
-    /**
-     * Validates the login credentials.
-     *
-     * @param username The username entered by the user.
-     * @param password The password entered by the user.
-     * @return A boolean indicating whether the login credentials are valid.
-     */
-    public boolean validateLogin(String username, String password) {
-        // Simulating credential validation
-        String validUsername = "testUser";
-        String validPassword = "testPassword";
+import static org.junit.jupiter.api.Assertions.*;
 
-        return username.equals(validUsername) && password.equals(validPassword);
+public class LoginServiceTest {
+
+    @Test
+    public void testValidateLogin() {
+        LoginService loginService = new LoginService();
+        boolean isValid = loginService.validateLogin("testUser", "testPassword");
+        assertTrue(isValid, "Login should be valid for correct credentials");
     }
 
-    /**
-     * Retrieves the dashboard title upon successful login.
-     *
-     * @return The title of the dashboard page.
-     */
-    public String getDashboardTitle() {
-        return "Dashboard";
+    @Test
+    public void testGetDashboardTitle() {
+        LoginService loginService = new LoginService();
+        String title = loginService.getDashboardTitle();
+        assertEquals("Dashboard", title, "Dashboard title should match");
     }
 }
+
